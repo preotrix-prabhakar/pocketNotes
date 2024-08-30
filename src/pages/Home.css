@@ -1,0 +1,174 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.createBTN{
+    background: #16008B;
+    border: none;
+    font-size: 16px;
+    color: white;
+    padding: 5px 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+ .group-input-popup{
+    background-color: #FFFFFF;
+   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    max-width: 500px;
+    transform: translate(-50%, -50%);
+    padding: 3%;
+    border-radius: 10px;
+    z-index: 1000;
+  }
+
+  .group-input-popup h1{
+    padding: 15px;
+  }
+.plus-btn{
+    background: #16008B;
+    display: flex;
+    border-style: none;
+    height: 50px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    position: sticky;
+    left: 50%;
+    top: 92%;
+    font-size: 50px;
+    border-radius: 50%;
+}
+.colors-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+.color-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    font-family: 'Roboto';
+    
+}
+.description{
+    padding: 0 20%;
+    text-align: center;
+}
+.grpName {
+  
+    padding: 5px 15px;
+    margin: 15px auto;
+    border: 2px solid #CCCCCC;
+    border-radius: 25px;
+    color: black
+ 
+}
+.grpName::placeholder{
+    color: #979797;
+}
+.heading{
+    margin: 30px 5px;
+    position: sticky;
+    top: 0px;
+    padding: 20px 10px;
+    background-color: white;
+}
+
+.left {
+    width: 20%;
+    position: relative;
+    text-align: center;
+    height: 100vh;
+  }
+.right{
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #DAE5F5;
+}
+.right img{
+    width: 80%;
+    padding:10% 20%;
+}
+
+
+
+ /* Mobile view adjustments */
+@media (max-width: 20px) {
+    .container {
+      display: block;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden; /* Ensure no scrollbars appear */
+    }
+  
+    .left {
+      width: 100%;
+      height: auto;
+      position: relative;
+      overflow: hidden; /* Hide overflow to ensure no scrollbars appear */
+    }
+  
+    .right {
+      display: none;
+    }
+  
+    .group-notes-container.active {
+      display: block;
+      width: 100%;
+      height: 100vh;
+      background-color: #DAE5F5;
+      position: fixed; /* Use fixed to keep it in place */
+      top: 0;
+      left: 0;
+      z-index: 1001;
+      padding: 20px;
+    }
+  
+    .back-btn {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #16008B;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  
+    .plus-btn {
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      font-size: 30px; /* Adjust size for mobile */
+    }
+  
+    .overlay {
+      display: none; /* Hide overlay in mobile view if not needed */
+    }
+  }
+  

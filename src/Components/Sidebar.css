@@ -1,0 +1,36 @@
+.AllGroup{
+    display: flex;
+    gap: 10px;
+    height: 50px;
+    align-items: center;
+    padding-left: 10px;
+    margin:10px;
+    margin-left: 0;
+    cursor: pointer;
+    
+}
+.parent{
+    overflow-y: auto;
+    max-height: 78vh;
+    display: flex;
+    flex-direction: column;
+}
+.icon{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    align-items: center;
+    border-radius: 50%;  
+}
+.AllGroup:hover {
+    background-color: #2F2F2F2B; 
+    border-radius: 8px; 
+}
+
+.AllGroup:hover .icon {
+    transform: scale(1.1);
+    transition: transform 0.1s ; 
+}
+
