@@ -12,6 +12,7 @@ function Home() {
   const [toPopUp, setPopUp] = useState(false);
   const [groupName, setGroupName] = useState('');
   const [selectedColor, setSelectedColor] = useState('');
+  const [showGroupNotes,setShowGroupNotes]=useState('false');
   const popupRef = useRef(null);
 
   const { groups, setGroups, selectedGroup } = useContext(GroupData); 
@@ -32,7 +33,8 @@ function Home() {
       setSelectedColor('');
       setGroupName('');
       setPopUp(false);
-    } else {
+    } 
+    else {
       alert('Please enter a group name and select a color.');
     }
   };

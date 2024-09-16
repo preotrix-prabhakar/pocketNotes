@@ -45,8 +45,9 @@
     align-items: center;
     justify-content: center;
     width: 50px;
-    position: sticky;
-    left: 50%;
+    
+    position: absolute;
+    left: 69%;
     top: 92%;
     font-size: 50px;
     border-radius: 50%;
@@ -80,7 +81,8 @@
     margin: 15px auto;
     border: 2px solid #CCCCCC;
     border-radius: 25px;
-    color: black
+    color: black;
+    width:80%
  
 }
 .grpName::placeholder{
@@ -116,59 +118,40 @@
 }
 
 
-
- /* Mobile view adjustments */
-@media (max-width: 20px) {
-    .container {
-      display: block;
-      height: 100vh;
-      width: 100vw;
-      overflow: hidden; /* Ensure no scrollbars appear */
-    }
-  
-    .left {
-      width: 100%;
-      height: auto;
-      position: relative;
-      overflow: hidden; /* Hide overflow to ensure no scrollbars appear */
-    }
-  
-    .right {
-      display: none;
-    }
-  
-    .group-notes-container.active {
-      display: block;
-      width: 100%;
-      height: 100vh;
-      background-color: #DAE5F5;
-      position: fixed; /* Use fixed to keep it in place */
-      top: 0;
-      left: 0;
-      z-index: 1001;
-      padding: 20px;
-    }
-  
-    .back-btn {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      background-color: #16008B;
-      color: white;
-      border: none;
-      padding: 10px;
-      border-radius: 5px;
-    }
-  
-    .plus-btn {
-      position: fixed;
-      bottom: 15px;
-      right: 15px;
-      font-size: 30px; /* Adjust size for mobile */
-    }
-  
-    .overlay {
-      display: none; /* Hide overlay in mobile view if not needed */
-    }
+@media (max-width: 600px) { 
+  .container {
+    display: flex;
+    flex-direction: column; 
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; 
   }
+
+   .left {
+    width: 100%;
+    height: 100vh; 
+    position: relative;
+  }
+
+  .right {
+    display: none; 
+    height: 100%;
+  } 
   
+  .plus-btn {
+    position: absolute;
+    bottom: 150px;
+    left:85%;
+    font-size: 30px;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+}
